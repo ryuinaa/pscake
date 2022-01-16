@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p.s. Cake</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/jquery.nicescroll.js"></script>
+    <script src="script/script.js"></script>
+    <!--부드러운 페이지 전환 start-->
+    <script>
+        jQuery(function ($) {
+            $("body").css("display", "none");
+            $("body").fadeIn(2000);
+            $("a.transition").click(function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);
+            });
+
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        });
+    </script>
+    <!--부드러운 페이지 전환 end-->
+</head>
+
+<body>
+    <div class="lace">
+        <div class="lacetop"></div>
+        <div class="lacetop2"></div>
+        <div class="lacebottom"></div>
+        <div class="laceleft"></div>
+        <div class="laceright"></div>
+        <div class="laceright2"></div>
+    </div>
+    <!-- video start -->
+    <div class="video">
+        <div class="videoclick">
+            <!-- <p>♡click♡</p> -->
+            <p><a href="main.html"><img src="images/clickme.png" alt="click"></a></p>
+        </div>
+        <video src="video/9making22.mp4" muted autoplay loop width="100%" height="100%"></video>
+    </div>
+    <!-- video end-->
+
+
+</body>
+
+</html>
